@@ -1,14 +1,23 @@
 package PF06;
 
 /**
- * 同market basket
- * 有时间可以增加feature比如 multibuy打折
+ *
+ * Traced CVS class to its parent class
  */
 public class CVS extends GroceryStore {
 
-
+    /**
+     * constructor
+     */
     public CVS() {
         super();
+        fillItemMap();
+    }
+
+    /**
+     * fill into the itemMap
+     */
+    public void fillItemMap(){
         this.itemMap.put("Allergy-relief-tablets", new Node(4.49, 10));
         this.itemMap.put("First-Aid-Tape", new Node(1.99, 10));
         this.itemMap.put("Toothbrush", new Node(0.99, 10));
@@ -22,7 +31,7 @@ public class CVS extends GroceryStore {
     }
 
     /**
-     *
+     *calculate the total price
      * @return
      */
     @Override

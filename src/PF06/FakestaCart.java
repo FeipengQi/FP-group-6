@@ -2,9 +2,6 @@ package PF06;
 
 import java.util.*;
 public class FakestaCart {
-    /**
-     *
-     */
     public static final int START_HOUR = 9;
     public static final int END_HOUR = 18;
 

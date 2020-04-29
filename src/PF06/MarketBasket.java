@@ -1,7 +1,7 @@
 package PF06;
 
 /**
- *
+ *Traced MarketBasket class to its parent class
  */
 public class MarketBasket extends GroceryStore {
     /**
@@ -34,7 +34,7 @@ public class MarketBasket extends GroceryStore {
     }
 
     /**
-     *
+     *calculate the total price
      * @return
      */
     @Override
