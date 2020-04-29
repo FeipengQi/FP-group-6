@@ -25,4 +25,7 @@ hs_err_pid*
 *.xml
 
 # ignore .idea dir
+.DS_Store
 .idea
+*.xml
+.idea/workspace.xml
