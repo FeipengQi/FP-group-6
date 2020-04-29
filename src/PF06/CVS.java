@@ -1,4 +1,4 @@
-package FinalProject;
+package PF06;
 
 /**
  * 同market basket
@@ -28,10 +28,6 @@ public class CVS extends GroceryStore {
     @Override
     public double receiveOrder() {
         double total_price = super.receiveOrder();
-        if (total_price > PRICE_THRESHOLD) {
-            total_price -= 5;
-            System.out.println("You received $5 off!");
-        }
         return total_price;
     }
 }

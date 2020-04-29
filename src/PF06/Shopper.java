@@ -4,7 +4,8 @@ package PF06;
  * Shopper class represents the different feature of a given shopper. 
  */
 public class Shopper {
-	private GroceryStore store;
+
+    private GroceryStore store;
     private int startTime;
     private int endTime;
     private boolean occupied;
@@ -20,7 +21,7 @@ public class Shopper {
       this.endTime = endTime;
       this.timeLeft = 1;
       this.occupied = false;
-      this.delivered = false;
+//      this.delivered = false;
     }
     /*
      * shopper's earliest available time for delivering..

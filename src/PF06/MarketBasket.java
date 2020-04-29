@@ -1,13 +1,26 @@
-package FinalProject;
+package PF06;
 
 /**
  *
  */
-public class MarketBasket extends GroceryStore{
+public class MarketBasket extends GroceryStore {
+    /**
+     * ..
+     */
     final int PRICE_THRESHOLD = 30;
 
+    /**
+     * constructor
+     */
     public MarketBasket(){
         super();
+        fillItemMap();
+    }
+
+    /**
+     * fill into the itemMap
+     */
+    private void fillItemMap() {
         this.itemMap.put("tomato", new Node(0.60, 10));
         this.itemMap.put("potato", new Node(0.50, 10));
         this.itemMap.put("onion", new Node(0.50, 10));

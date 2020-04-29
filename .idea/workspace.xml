@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c779359a-590a-4ffe-a847-edd4e53bd556" name="Default Changelist" comment="" />
+    <list default="true" id="fa3f5703-38ad-40a7-8f1d-6318dce8c336" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PA-group6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FP-group-6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PF06/CVS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PF06/CVS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PF06/FakestaCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PF06/FakestaCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PF06/MarketBasket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PF06/MarketBasket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PF06/Shopper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PF06/Shopper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,40 +21,77 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1bCJWqYRNkRgBRwsMnb7QWAJYId" />
+  <component name="ProjectId" id="1bCOaWxiNyjl6JcnA7XdAuD6JIC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FakestaCart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PF06.FakestaCart" />
+      <module name="PA-group6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PF06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FakestaCart" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c779359a-590a-4ffe-a847-edd4e53bd556" name="Default Changelist" comment="" />
-      <created>1588131244617</created>
+      <changelist id="fa3f5703-38ad-40a7-8f1d-6318dce8c336" name="Default Changelist" comment="" />
+      <created>1588132673034</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588131244617</updated>
-      <workItem from="1588131246992" duration="228000" />
+      <updated>1588132673034</updated>
+      <workItem from="1588132675085" duration="1738000" />
+      <workItem from="1588134439606" duration="509000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="544" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588130251722">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1638" height="266" key="GridCell.Tab.0.bottom" timestamp="1588134951126">
+      <screen x="0" y="23" width="1680" height="984" />
     </state>
-    <state x="544" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1588130251722" />
+    <state width="1638" height="266" key="GridCell.Tab.0.bottom/0.23.1680.984@0.23.1680.984" timestamp="1588134951126" />
+    <state width="1638" height="266" key="GridCell.Tab.0.center" timestamp="1588134951125">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1638" height="266" key="GridCell.Tab.0.center/0.23.1680.984@0.23.1680.984" timestamp="1588134951125" />
+    <state width="1638" height="266" key="GridCell.Tab.0.left" timestamp="1588134951125">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1638" height="266" key="GridCell.Tab.0.left/0.23.1680.984@0.23.1680.984" timestamp="1588134951125" />
+    <state width="1638" height="266" key="GridCell.Tab.0.right" timestamp="1588134951126">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state width="1638" height="266" key="GridCell.Tab.0.right/0.23.1680.984@0.23.1680.984" timestamp="1588134951126" />
+    <state x="519" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1588134438707">
+      <screen x="0" y="23" width="1680" height="984" />
+    </state>
+    <state x="519" y="347" key="com.intellij.ide.util.TipDialog/0.23.1680.984@0.23.1680.984" timestamp="1588134438707" />
   </component>
 </project>
