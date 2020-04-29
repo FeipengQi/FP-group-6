@@ -1,7 +1,11 @@
-public static final int START_HOUR = 9;
-public static final int END_HOUR = 18;
+package PF06;
 
-public static void main(String[] args) throws IllegalAccessException {
+import java.util.*;
+public class FakestaCart {
+    public static final int START_HOUR = 9;
+    public static final int END_HOUR = 18;
+
+    public static void main(String[] args) throws IllegalAccessException {
         GroceryStore marketBasket = new MarketBasket();
         GroceryStore cvs = new CVS();
         Scanner console = new Scanner(System.in);
@@ -20,96 +24,96 @@ public static void main(String[] args) throws IllegalAccessException {
 
         marketBasket.restock();
         cvs.restock();
-        }
+    }
 
-/**
- * record shopper's info
- * @param shoppers shoppers's list
- * @param marketBasket Market Basket
- * @param cvs CVS
- * @param console scanner instance
- */
-public static void shopperRegister(Shopper[] shoppers, GroceryStore marketBasket, GroceryStore cvs, Scanner console){
+    /**
+     * record shopper's info
+     * @param shoppers shoppers's list
+     * @param marketBasket Market Basket
+     * @param cvs CVS
+     * @param console scanner instance
+     */
+    public static void shopperRegister(Shopper[] shoppers, GroceryStore marketBasket, GroceryStore cvs, Scanner console){
         for(int i = 0; i < shoppers.length; i++){
-        System.out.println("Please enter shopper " + (i + 1) +
-        "'s available store (MarketBasket/CVS), starting time, and ending time, with space in b/w: ");
-        String store = console.next();
-        if (store.equals("MarketBasket")){
-        shoppers[i] = new Shopper(marketBasket, console.nextInt(), console.nextInt());
-        } else if(store.equals("CVS")){
-        shoppers[i] = new Shopper(cvs, console.nextInt(), console.nextInt());
-        } else throw new NoSuchElementException();
+            System.out.println("Please enter shopper " + (i + 1) +
+                    "'s available store (MarketBasket/CVS), starting time, and ending time, with space in b/w: ");
+            String store = console.next();
+            if (store.equals("MarketBasket")){
+                shoppers[i] = new Shopper(marketBasket, console.nextInt(), console.nextInt());
+            } else if(store.equals("CVS")){
+                shoppers[i] = new Shopper(cvs, console.nextInt(), console.nextInt());
+            } else throw new NoSuchElementException();
         }
-        }
+    }
 
-public static void customerShopping(ArrayList<Customer> customers, GroceryStore marketBasket, GroceryStore cvs, Scanner console){
+    public static void customerShopping(ArrayList<Customer> customers, GroceryStore marketBasket, GroceryStore cvs, Scanner console){
         System.out.println("How many customers are in queue? ");
         int numOfCustomers = console.nextInt();
         System.out.println("Receiving customers order...");
         for(int i = 0; i < numOfCustomers; i++){
-        System.out.println("Hi, please enter your name, store, and when do you want to start your delivery (9 to 18): ");
-        String name = console.next();
-        String store = console.next();
-        int time_slot = console.nextInt();
-        Customer customer;
-        double total_price = 0;
-        if (store.equals("MarketBasket")){
-        total_price = marketBasket.receiveOrder();
-        customer = new Customer(name, marketBasket, time_slot);
-        } else if(store.equals("CVS")){
-        total_price = cvs.receiveOrder();
-        customer = new Customer(name, cvs, time_slot);
-        } else throw new IllegalArgumentException("Sorry, your order is invalid...");
-        customers.add(customer);
-        System.out.printf("total price is : %.2f \n", total_price);
-        System.out.println("Please wait for your delivery.");
-        System.out.println();
+            System.out.println("Hi, please enter your name, store, and when do you want to start your delivery (9 to 18): ");
+            String name = console.next();
+            String store = console.next();
+            int time_slot = console.nextInt();
+            Customer customer;
+            double total_price = 0;
+            if (store.equals("MarketBasket")){
+                total_price = marketBasket.receiveOrder();
+                customer = new Customer(name, marketBasket, time_slot);
+            } else if(store.equals("CVS")){
+                total_price = cvs.receiveOrder();
+                customer = new Customer(name, cvs, time_slot);
+            } else throw new IllegalArgumentException("Sorry, your order is invalid...");
+            customers.add(customer);
+            System.out.printf("total price is : %.2f \n", total_price);
+            System.out.println("Please wait for your delivery.");
+            System.out.println();
         }
-        }
+    }
 
-public static void startDelivery(ArrayList<Customer> customers, Shopper[] shoppers){
+    public static void startDelivery(ArrayList<Customer> customers, Shopper[] shoppers){
         for(int time = START_HOUR; time <= END_HOUR; time++){
-        System.out.println("Time: " + time + ":00" );
-        if (customers.size() > 0){
-        for(int i = 0; i < shoppers.length; i++){
-        Shopper curr_shopper = shoppers[i];
-        // if the shopper is not occupied
-        if(!curr_shopper.isOccupied()){
-        for(int k = 0; k < customers.size(); k++){
-        Customer curr_customer = customers.get(k);
-        // if shopper and customer match
-        if (curr_shopper.getGroceryStore() == curr_customer.getGroceryStore()){
-        // within time frame
-        if (curr_customer.getTimeSlot() == time) {
-        if (curr_shopper.getStartTime() <= curr_customer.getTimeSlot() && curr_customer.getTimeSlot() <= curr_shopper.getEndTime()){
-        System.out.println("Shopper" + (i + 1) + " starts delivering order of " + curr_customer.getName());
-        curr_shopper.startDelivery(curr_customer);
-        break;
+            System.out.println("Time: " + time + ":00" );
+            if (customers.size() > 0){
+                for(int i = 0; i < shoppers.length; i++){
+                    Shopper curr_shopper = shoppers[i];
+                    // if the shopper is not occupied
+                    if(!curr_shopper.isOccupied()){
+                        for(int k = 0; k < customers.size(); k++){
+                            Customer curr_customer = customers.get(k);
+                            // if shopper and customer match
+                            if (curr_shopper.getGroceryStore() == curr_customer.getGroceryStore()){
+                                // within time frame
+                                if (curr_customer.getTimeSlot() == time) {
+                                    if (curr_shopper.getStartTime() <= curr_customer.getTimeSlot() && curr_customer.getTimeSlot() <= curr_shopper.getEndTime()){
+                                        System.out.println("Shopper" + (i + 1) + " starts delivering order of " + curr_customer.getName());
+                                        curr_shopper.startDelivery(curr_customer);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // occupied and is delivering
+                    else if (curr_shopper.isOccupied() && curr_shopper.getTimeLeft() > 0) {
+                        curr_shopper.approaching();
+                        System.out.println(curr_shopper.getCustomer().getName() + "'s order is on the way!");
+                    }
+                    // delivered
+                    else if (curr_shopper.isOccupied() && curr_shopper.getTimeLeft() == 0){
+                        Customer current_customer = curr_shopper.getCustomer();
+                        System.out.println("Customer " + current_customer.getName().toString()+ "'s order is delivered!");
+                        if(time == END_HOUR){
+                            System.out.println();
+                        } else{
+                            System.out.println("Shopper " + (i + 1) + " is available again!");
+                        }
+                        curr_shopper.delivered();
+                        int index = customers.indexOf(current_customer);
+                        // remove customer
+                        customers.remove(index);
+                    }
+                }
+            }
         }
-        }
-        }
-        }
-        }
-        // occupied and is delivering
-        else if (curr_shopper.isOccupied() && curr_shopper.getTimeLeft() > 0) {
-        curr_shopper.approaching();
-        System.out.println(curr_shopper.getCustomer().getName() + "'s order is on the way!");
-        }
-        // delivered
-        else if (curr_shopper.isOccupied() && curr_shopper.getTimeLeft() == 0){
-        Customer current_customer = curr_shopper.getCustomer();
-        System.out.println("Customer " + current_customer.getName().toString()+ "'s order is delivered!");
-        if(time == END_HOUR){
-        System.out.println();
-        } else{
-        System.out.println("Shopper " + (i + 1) + " is available again!");
-        }
-        curr_shopper.delivered();
-        int index = customers.indexOf(current_customer);
-        // remove customer
-        customers.remove(index);
-        }
-        }
-        }
-        }
-        }
+    }
