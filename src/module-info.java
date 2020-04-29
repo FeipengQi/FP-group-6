@@ -1,0 +1,2 @@
+module FPgroup6 {
+}
