@@ -47,6 +47,13 @@ public class FakestaCart {
         }
     }
 
+    /**
+     * record customers' info
+     * @param customers empty list that will hold every customers' info
+     * @param marketBasket Market Basket
+     * @param cvs CVS
+     * @param console
+     */
     public static void customerShopping(ArrayList<Customer> customers, GroceryStore marketBasket, GroceryStore cvs, Scanner console) {
         System.out.println("How many customers are in queue? ");
         int numOfCustomers = console.nextInt();
@@ -82,6 +89,11 @@ public class FakestaCart {
         }
     }
 
+    /**
+     * start the delivery of the day
+     * @param customers every customers waiting for delivery
+     * @param shoppers shoppers in response
+     */
     public static void startDelivery(ArrayList<Customer> customers, Shopper[] shoppers) {
         for (int time = START_HOUR; time <= END_HOUR; time++) {
             System.out.println(time + ":00");
