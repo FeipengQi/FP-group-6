@@ -1,4 +1,9 @@
 package PF06;
+/**
+ * This class simulate the online shopping process in a day. FakestaCart mimics the work of Instacart.
+ * It has shoppers and customers registered at the beginning of a day, and after collect all the orders,
+ * the shoppers would start their delivery. 
+ */
 
 import java.util.*;
 public class FakestaCart {
