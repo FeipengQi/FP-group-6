@@ -1,4 +1,9 @@
 package PF06;
+/**
+ * This class simulate the online shopping process in a day. FakestaCart mimics the work of Instacart.
+ * It has shoppers and customers registered at the beginning of a day, and after collect all the orders,
+ * the shoppers would start their delivery. 
+ */
 
 import java.util.*;
 public class FakestaCart {
@@ -47,6 +52,13 @@ public class FakestaCart {
         }
     }
 
+    /**
+     * record customers' info
+     * @param customers empty list that will hold every customers' info
+     * @param marketBasket Market Basket
+     * @param cvs CVS
+     * @param console
+     */
     public static void customerShopping(ArrayList<Customer> customers, GroceryStore marketBasket, GroceryStore cvs, Scanner console) {
         System.out.println("How many customers are in queue? ");
         int numOfCustomers = console.nextInt();
@@ -82,6 +94,11 @@ public class FakestaCart {
         }
     }
 
+    /**
+     * start the delivery of the day
+     * @param customers every customers waiting for delivery
+     * @param shoppers shoppers in response
+     */
     public static void startDelivery(ArrayList<Customer> customers, Shopper[] shoppers) {
         for (int time = START_HOUR; time <= END_HOUR; time++) {
             System.out.println(time + ":00");
