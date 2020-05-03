@@ -76,7 +76,7 @@ public class FakestaCart {
                     System.out.println();
                     break;
                 } else {
-                    System.out.println("Sorry, we only provide service at CVS or MarketBasktet... Please select one of them");
+                    System.out.println("Sorry, we only provide service at CVS or MarketBasket... Please select one of them");
                 }
             }
         }
